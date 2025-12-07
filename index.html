@@ -339,12 +339,9 @@
         <h2 class="title is-3">CCG Metric</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <img src="./static/images/spatial-query.png" />
             <p>
-              <i>What is the distance between the refrigerator from the television?</i>
-            </p>
-            <p>
-              A key benefit of lifting foundation features to 3D is the ability to reason about spatial attributes. We implement a set of generic spatial relationship comparators that can be leveraged for querying arbitrary objects. We employ a large language model to parse the queries to generate function calls that can directly be executed. E.g., the query above parses to <tt>howFar(refrigirator, television)</tt>.
+              Concept-based interpretable models are especially of importance in high-risk scenarios where there may be a high cost associated with an erroneous decision. We hence propose a metric to study CBM-related models in such a worst-case setting.
+              Our evaluation is based on test-time corrections of concepts (or predicates). For each sample, we identify the most misleading concept (or predicate) and turn it off (or on, depending on ground truth for a given example). We then measure the resulting change in the model’s prediction confidence.
             </p>
           </div>
 
