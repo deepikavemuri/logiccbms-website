@@ -117,14 +117,15 @@
         <img source src="./static/images/logiccbms_teaser.png" />
       <!-- </video> -->
       <h2 class="subtitle has-text-centered">
-        <span class="coolname">LogicCBMs</span> builds open-set 3D maps that can be queried via text, click, image, or audio.
+        <span class="coolname">LogicCBMs</span> enhance concept-based learning models by including differentiable logic gates in the network. The model now forms logical 
+        compositions of concepts while predicting the class label for a given input image. (Dark shades indicate higher strength in the figure; e.g. Furry is the strongest concept and Cat is the predicted class.)
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -203,21 +204,21 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
   <div class="container is-max-desktop">
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/rkXgws8fiDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
 
     <!-- Abstract. -->
@@ -252,7 +253,7 @@
           <p>
             LogicCBMs constructs pixel-aligned features from off-the-shelf foundation models that can only produce a global (image-level) embedding vector. This is achieved by: processing input images to generate generic (class-agnostic) object masks and extracting a local features for each, computing a global feature for the input image as a whole, and fusing the region-specific features with global features using our proposed zero-shot pixel alignment technique.
           </p>
-          <img src="./static/images/pipeline.png" />
+          <img src="./static/images/logiccbms_arch.png" />
         </div>
         <br/>
       </div>
