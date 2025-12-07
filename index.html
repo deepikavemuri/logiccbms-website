@@ -247,7 +247,7 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+  <div class="columns is-centered is-vcentered">
       <div class="column is-full-width">
         <h2 class="title is-3">Approach</h2>
 
@@ -341,7 +341,9 @@
         <h2 class="title is-3">CCG Metric</h2>
         <div class="content">
           <p>
-            Concept-based interpretable models are especially of importance in high-risk scenarios where there may be a high cost associated with an erroneous decision. We hence propose a metric to study CBM-related models in such a worst-case setting. Our evaluation is based on test-time corrections of concepts (or predicates). For each sample, we identify the most misleading concept (or predicate) and turn it off (or on, depending on ground truth for a given example). We then measure the resulting change in the model’s prediction confidence.
+            Concept-based interpretable models are especially of importance in high-risk scenarios where there may be a high cost associated with an erroneous decision. We hence propose a metric to study CBM-related models in such a worst-case setting. 
+            Our evaluation is based on test-time corrections of concepts (or predicates). For each sample, we identify the most misleading concept (or predicate) and turn it off (or on, depending on ground truth for a given example). We then measure the resulting change in the model’s prediction confidence.
+            We term this quantity as the <i>Concept Correction Gain</i> (CCG). 
           </p>
         </div>
       </div>
