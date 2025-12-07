@@ -116,9 +116,16 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body has-text-centered">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
-        <img src="./static/images/logiccbms_teaser.png" alt="LogicCBMs teaser" style="max-width:100%;height:auto;" />
-      <!-- </video> -->
+      <div class="container">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-6 has-text-centered">
+            <img src="./static/images/logiccbms_teaser.png" alt="LogicCBMs teaser" style="max-width:100%;height:auto;display:inline-block;" />
+          </div>
+          <div class="column is-6 has-text-centered">
+            <img src="./static/images/logiccbm_teaser2.png" alt="LogicCBMs teaser 2" style="max-width:100%;height:auto;display:inline-block;" />
+          </div>
+        </div>
+      </div>
       <h2 class="subtitle has-text-centered">
         <span class="coolname">LogicCBMs</span> enhance concept-based learning models by including differentiable logic gates in the network. The model now forms logical 
         compositions of concepts while predicting the class label for a given input image. (Dark shades indicate higher strength in the figure; e.g. Furry is the strongest concept and Cat is the predicted class.)
@@ -251,20 +258,22 @@
         <h2 class="title is-3">Approach</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Construct pixel-aligned features</h3>
-        <div class="content has-text-justified">
+        <!-- <h3 class="title is-4">Construct pixel-aligned features</h3>
+        <div class="content has-text-justified"> -->
           <p>
             We introduce LogicCBMs, a technique to introduce logic operations into concept-based learning models in an end-to-end differentiable manner.
             As shown in the below figure, we introduce a logic module (which can consist of multiple logic gate layers) following the concept encoder to extract logical predicates, 
             which are then sent to a classifier. There are two steps involved to learn predicates: (i) Concept pairing, and (ii) Differentiable logic learning.
           </p>
-        </div>
+        <!-- </div> -->
         <br/>
       </div>
     </div>
     <div class="arch-figure">
       <img src="./static/images/logiccbms_arch.png" alt="LogicCBMs architecture" style="display:block;margin:0.75rem auto 0 auto;max-width:85%;height:auto;" />
     </div>
+    <br/>
+    <br/>
 
 
     <div class="columns is-centered">
@@ -307,9 +316,9 @@
       <!-- UnCoCo dataset -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">UnCoCo dataset</h2>
+          <h2 class="title is-3">CLEVR-Logic Dataset</h2>
           <div class="interpolation-image-wrapper-uncoco">
-            <img src="./static/images/uncoco.png" />
+            <img src="./static/images/clevr_logic_dataset.png" />
           </div>
           <p>
             To evaluate long-tailed reasoning and multimodal reasoning abilities, since there is no existing dataset, we capture a set of 20 RGB-D sequences comprising 78 commonly found objects and annotate them with text, audio, click, and image queries. For each query, we also provide the corresponding ground truth 2D and 3D retrieval results. This image showcases sample tabletop scenes from UnCoCo (left) and the resulting 3D reconstructions and labels (right).
@@ -320,7 +329,7 @@
 
       <!-- 3D spatial reasoning -->
       <div class="column">
-        <h2 class="title is-3">3D spatial reasoning</h2>
+        <h2 class="title is-3">CCG Metric</h2>
         <div class="columns is-centered">
           <div class="column content">
             <img src="./static/images/spatial-query.png" />
