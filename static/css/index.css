@@ -181,3 +181,8 @@ body {
     max-width: 1100px;
   }
 }
+
+/* Fallback: ensure top spacing is present even if other styles override */
+html, body {
+  padding-top: 1.5rem !important;
+}
