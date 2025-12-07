@@ -195,15 +195,15 @@ body {
 .clevr-figure {
   display: block;
   margin: 0.5rem auto 0 auto;
-  width: 95%;            /* fill most of the column */
-  max-width: none;      /* let the column cap the size */
+  width: 100%;            /* fill most of the column */
+  max-width: 520px;       /* cap size to avoid over-scaling/blurriness */
   height: auto;
 }
 @media (min-width: 1000px) {
   .interpolation-image-wrapper-uncoco img,
   .clevr-figure {
-    width: 95%;
-    max-width: none;
+    width: 100%;
+    max-width: 680px;     /* slightly larger on wide screens */
   }
 }
 
