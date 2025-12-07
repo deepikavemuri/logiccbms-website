@@ -196,14 +196,14 @@ body {
   display: block;
   margin: 0.5rem auto 0 auto;
   width: 100%;            /* fill most of the column */
-  max-width: 760px;       /* cap size to avoid over-scaling/blurriness (increased) */
+  max-width: 1000px;      /* increased cap to show a larger figure */
   height: auto;
 }
 @media (min-width: 1000px) {
   .interpolation-image-wrapper-uncoco img,
   .clevr-figure {
     width: 100%;
-    max-width: 900px;     /* slightly larger on wide screens (increased) */
+    max-width: 1200px;    /* allow larger display on wide screens */
   }
 }
 
