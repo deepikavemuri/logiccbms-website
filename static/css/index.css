@@ -156,9 +156,11 @@ body {
   border-radius: 5px;
 }
 
-/* Small top spacing so the page content isn't flush to the top */
-body {
-  padding-top: 1.5rem;
+/* Small top spacing so the page content isn't not flush to the top.
+   Use margin on the first hero instead of body to avoid being overridden
+   by other layout styles. */
+.hero:first-of-type {
+  margin-top: 1.5rem !important;
 }
 
 /* Larger centered architecture figure */
@@ -167,6 +169,15 @@ body {
   margin-top: 1rem;
 }
 .arch-figure img {
-  max-width: 90%;
-  height: auto;
+  display: block !important;
+  margin: 0.75rem auto 0 auto !important; /* center block image */
+  max-width: 85% !important;
+  height: auto !important;
+}
+
+/* Slightly larger architecture image on wide screens */
+@media (min-width: 1200px) {
+  .arch-figure img {
+    max-width: 1100px;
+  }
 }
