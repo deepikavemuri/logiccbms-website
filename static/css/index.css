@@ -217,12 +217,12 @@ html, body {
   display: block !important;
   margin: 0.5rem auto 0 auto !important;
   width: 90% !important;
-  max-width: 600px !important; /* further reduced to fit comfortably */
+  max-width: 700px !important; /* further reduced to fit comfortably */
   height: auto !important;
 }
 
 @media (min-width: 1200px) {
   .ccg_figure {
-    max-width: 800px !important; /* slightly larger on very wide screens */
+    max-width: 900px !important; /* slightly larger on very wide screens */
   }
 }
