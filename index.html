@@ -317,69 +317,35 @@
 
 
     <div class="columns is-centered">
-
-      <!-- UnCoCo dataset -->
-      <div class="column">
+      <div class="column is-two-thirds">
         <div class="content">
           <h2 class="title is-3">CLEVR-Logic Dataset</h2>
           <p>
             Since real-world datasets do not have explicit logic supervision, it is not straightforward to assess the correctness of the logic. In order to do this, we propose a new variant of CLEVR: <i>CLEVR-Logic</i> which we generated to study logical relations among objects in images.
-            In CLEVR-Logic we define concepts to be a set of CLEVR objects (sphere, cone, cube, cylinder) and specify classes as logical operations among these objects. For example, sphere \( \oplus \) cone could be one class which has
-            images that exclusively contain either a sphere or a cone. CLEVR images are then generated per class following the class-specific logic. Some examples of some images generated this way are shown below along with their corressponding class-level logic.
+            In CLEVR-Logic we define concepts to be a set of CLEVR objects (sphere, cone, cube, cylinder) and specify classes as logical operations among these objects. For example, sphere \( \oplus \) cone could be one class which has images that exclusively contain either a sphere or a cone. CLEVR images are then generated per class following the class-specific logic. Some examples of images generated this way are shown alongside their corresponding class-level logic.
           </p>
-          <div class="interpolation-image-wrapper-uncoco">
-            <img class="clevr-figure" src="./static/images/clevr_logic_dataset_samples.png" alt="CLEVR-Logic dataset visualization" />
-          </div>
         </div>
       </div>
-      <!--/ UnCoCo dataset -->
 
-      <!-- 3D spatial reasoning -->
-      <div class="column">
-        <h2 class="title is-3">CCG Metric</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Concept-based interpretable models are especially of importance in high-risk scenarios where there may be a high cost associated with an erroneous decision. We hence propose a metric to study CBM-related models in such a worst-case setting.
-              Our evaluation is based on test-time corrections of concepts (or predicates). For each sample, we identify the most misleading concept (or predicate) and turn it off (or on, depending on ground truth for a given example). We then measure the resulting change in the model’s prediction confidence.
-            </p>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="interpolation-image-wrapper-uncoco">
+            <img class="clevr-figure" src="./static/images/clevr_logic_dataset.png" alt="CLEVR-Logic dataset visualization" />
           </div>
-
         </div>
       </div>
     </div>
-    <!--/ 3D spatial reasoning -->
 
-    <!-- Long-form text queries -->    
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width"> -->
-
-        <!-- Interpolating. -->
-        <!-- <h2 class="title is-4">Long-form text queries</h2>
-        <div class="content has-text-justified">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">CCG Metric</h2>
+        <div class="content">
           <p>
-            LogicCBMs is able to handle long-form text queries and accurately localize objects referenced by the query. In the first two scenarios, OpenSeg is distracted by the presence of several confounding attributes. The third scenario shows a single world query (television) that is part of the COCO Captions dataset used to train OpenSeg, providing it an unfair advantage. LogicCBMs, nonetheless, accurately assigns the highest response to the map points representing the television. In each query, the referenced object is boldfaced.
+            Concept-based interpretable models are especially of importance in high-risk scenarios where there may be a high cost associated with an erroneous decision. We hence propose a metric to study CBM-related models in such a worst-case setting. Our evaluation is based on test-time corrections of concepts (or predicates). For each sample, we identify the most misleading concept (or predicate) and turn it off (or on, depending on ground truth for a given example). We then measure the resulting change in the model’s prediction confidence.
           </p>
-          <img src="./static/images/scannet-text-query.png" />
         </div>
-        <br/>
       </div>
-    </div> -->
-    <!--/ Long-form text queries -->
-
-    <!-- Click-query video -->    
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-4">Click-queries</h2>
-        <div class="content has-text-justified">
-          <p>
-            Click-queries over a sequence from the ICL dataset. For each clicked point, we compute the cosine similarity of the embedding at that point with that of every other map point and visualize them using a 'jet' colormap. Points in red indicate greatest similarity, while points in blue indicate least similarity. Notice the consistency in semantic concepts. For instance, when we click on a point on the corner lamp (at about 0:45), we also notice that the other corner lamp, as well as lights on top of the ceiling get high similarities assigned.
-          </p>
-          <video id="click-query-icl" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ICL Click query cropped.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+    </div>
         <br/>
       </div>
     </div> -->
