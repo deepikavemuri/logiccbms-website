@@ -172,16 +172,16 @@ body {
 .arch-figure img {
   display: block !important;
   margin: 0.75rem auto 0 auto !important; /* center block image */
-  width: 90% !important;           /* scale with container */
-  max-width: 1000px !important;   /* never exceed this */
+  width: 95% !important;           /* scale with container - increased */
+  max-width: 1200px !important;   /* increased cap */
   height: auto !important;
 }
 
 /* Slightly increase size on wide screens but keep sensible cap */
 @media (min-width: 1200px) {
   .arch-figure img {
-    width: 75% !important;
-    max-width: 1200px !important;
+    width: 85% !important; /* slightly larger on wide screens */
+    max-width: 1400px !important; /* allow bigger display on large monitors */
   }
 }
 
