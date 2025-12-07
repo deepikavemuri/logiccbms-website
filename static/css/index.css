@@ -193,17 +193,17 @@ body {
 }
 .interpolation-image-wrapper-uncoco img,
 .clevr-figure {
-  display: block;
-  margin: 0.5rem auto 0 auto;
-  width: 100%;            /* fill most of the column */
-  max-width: 1000px;      /* increased cap to show a larger figure */
-  height: auto;
+  display: block !important;
+  margin: 0.5rem auto 0 auto !important;
+  width: 100% !important;            /* fill most of the column */
+  max-width: 1000px !important;      /* increased cap to show a larger figure */
+  height: auto !important;
 }
 @media (min-width: 1000px) {
   .interpolation-image-wrapper-uncoco img,
   .clevr-figure {
-    width: 100%;
-    max-width: 1200px;    /* allow larger display on wide screens */
+    width: 100% !important;
+    max-width: 1200px !important;    /* allow larger display on wide screens */
   }
 }
 
