@@ -270,6 +270,12 @@
     <br/>
     <br/>
     <br/>
+    <p>
+      In order to determine the concept pairs, we extract the two concepts with the highest weight per row, which gives us a set of (\( p \)) concept pairs.
+      Since logic gates are by themselves non-differentiable operations, they pose a constraint in incorporating them into end-to-end learnable
+      architectures. In order to overcome this constraint, we use t-norms, which are the fuzzy versions of logic gates to
+      allow differentiability and backpropagation while passing the pairwise activations of the concept encoder through the logic layer.
+    </p>
 
 
     <!-- <div class="columns is-centered"> -->
