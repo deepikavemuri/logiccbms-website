@@ -270,12 +270,12 @@
     <br/>
     <br/>
     <p>
-      In order to determine the concept pairs, we extract the two concepts with the highest weight per row, which gives us a set of (\ p \) concept pairs.
+      In order to determine the concept pairs, we extract the two concepts with the highest weight per row, which gives us a set of \( p \) concept pairs.
       Since logic gates are by themselves non-differentiable operations, they pose a constraint in incorporating them into end-to-end learnable
       architectures. In order to overcome this constraint, we use t-norms, which are the fuzzy versions of logic gates to
       allow differentiability and backpropagation while passing the pairwise activations of the concept encoder through the logic layer.
-      For each of the p logic neurons, we compute all (\ q \) fuzzy logic operations on the concept pair assigned to it and learn a probability distribution to represent how important a logic
-      gate is for that concept pair. The probability distribution for each logic neuron is captured by the G matrix.
+      For each of the p logic neurons, we compute all \( q \) fuzzy logic operations on the concept pair assigned to it and learn a probability distribution to represent how important a logic
+      gate is for that concept pair. The probability distribution for each logic neuron is learned by the G matrix.
     </p>
     <br/>
     <br/>
@@ -322,12 +322,14 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">CLEVR-Logic Dataset</h2>
+          <p>
+            Since real-world datasets do not have explicit logic supervision, it is not straightforward to assess the correctness of the logic. In order to do this, we propose a new variant of CLEVR: <i>CLEVR-Logic</i> which we generated to study logical relations among objects in images.
+            In CLEVR-Logic we define concepts to be a set of CLEVR objects (sphere, cone, cube, cylinder) and specify classes as logical operations among these objects. For example, sphere \( \oplus \) cone could be one class which has
+            images that exclusively contain either a sphere or a cone. CLEVR images are then generated per class following the class-specific logic. Some examples of some images generated this way are shown below along with their corressponding class-level logic.
+          </p>
           <div class="interpolation-image-wrapper-uncoco">
             <img class="clevr-figure" src="./static/images/clevr_logic_dataset.png" alt="CLEVR-Logic dataset visualization" />
           </div>
-          <p>
-            To evaluate long-tailed reasoning and multimodal reasoning abilities, since there is no existing dataset, we capture a set of 20 RGB-D sequences comprising 78 commonly found objects and annotate them with text, audio, click, and image queries. For each query, we also provide the corresponding ground truth 2D and 3D retrieval results. This image showcases sample tabletop scenes from UnCoCo (left) and the resulting 3D reconstructions and labels (right).
-          </p>
         </div>
       </div>
       <!--/ UnCoCo dataset -->
