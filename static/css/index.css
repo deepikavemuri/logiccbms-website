@@ -207,6 +207,25 @@ body {
   }
 }
 
+/* Align CLEVR-Logic image vertically with the paragraph in the adjacent column.
+   Use flexbox on the column content and on the image wrapper so both blocks
+   center vertically within the row when `is-vcentered` is used. */
+.columns.is-vcentered .column.is-half > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.columns.is-vcentered .interpolation-image-wrapper-uncoco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.interpolation-image-wrapper-uncoco img {
+  margin-top: 0; /* remove extra top spacing that pushed the image down */
+  display: block;
+}
+
 /* Fallback: ensure top spacing is present even if other styles override */
 html, body {
   padding-top: 1.5rem !important;
