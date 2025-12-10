@@ -217,9 +217,10 @@ body {
 }
 .columns.is-vcentered .interpolation-image-wrapper-uncoco {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
+  margin-top: 3rem;
 }
 .interpolation-image-wrapper-uncoco img {
   margin-top: 0; /* remove extra top spacing that pushed the image down */
